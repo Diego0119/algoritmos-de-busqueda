@@ -1,0 +1,9 @@
+id,nombre,categoria,precio,stock
+1001,Laptop HP,Cómputo,899.99,15
+1002,Monitor Dell 24",Cómputo,249.99,30
+1003,Teclado Mecánico,Cómputo,79.99,50
+1004,Mouse Inalámbrico,Cómputo,29.99,100
+1005,Auriculares Bluetooth,Audio,59.99,45
+1006,Altavoz Portátil,Audio,129.99,20
+1007,Impresora Epson,Impresión,199.99,10
+1008,Cartucho Negro,Impresión,29.99,200
