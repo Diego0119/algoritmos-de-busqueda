@@ -1,4 +1,16 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define MAX_LINE_LENGTH 1024
+
+typedef struct
+{
+    int id;
+    char nombre[100];
+    char categoria[50];
+    float precio;
+    int stock;
+} Producto;
 
 void swap(int *element_a, int *element_b);
 
@@ -8,4 +20,10 @@ void bubble_sort_op(int arr[], int n);
 
 int iterative_binary_search(int arr[], int n, int target);
 
-int recursive_binary_search(int arr[], int n, int target);
+int recursive_binary_search(int arr[], int left, int right, int target);
+
+void display_csv_as_table(const char *filename);
+
+void show_menu();
+
+int load_products(const char *filename, Producto productos[]);
