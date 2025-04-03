@@ -39,5 +39,3 @@ En este proyecto implementaremos y analizaremos algoritmos de ordenación y bús
 
 ---
 
-🚀 ¡A programar y optimizar nuestros algoritmos! 💡
-
