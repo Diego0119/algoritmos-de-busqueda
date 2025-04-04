@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 #define MAX_LINE_LENGTH 1024
 
 typedef struct
@@ -12,11 +13,11 @@ typedef struct
     int stock;
 } Producto;
 
-void swap(int *element_a, int *element_b);
+void swap(Producto *a, Producto *b);
 
 void bubble_sort(int arr[], int n);
 
-void bubble_sort_op(int arr[], int n);
+void bubble_sort_op(Producto productos[], int n);
 
 int iterative_binary_search(int arr[], int n, int target);
 
@@ -30,5 +31,6 @@ int load_products(const char *filename, Producto productos[]);
 
 void insertion_sort(int arr[], int n);
 
-int secuencial_search(Producto productos[], int cantidad, int id) ;
+int secuencial_search(Producto productos[], int cantidad, int id);
 
+void save_products(const char *filename, Producto productos[], int n);

@@ -14,17 +14,17 @@ void bubble_sort(int arr[], int n)
     }
 }
 
-void bubble_sort_op(int arr[], int n)
+void bubble_sort_op(Producto productos[], int n)
 {
     for (int i = 0; i < n - 1; i++)
     {
-        int swapped = 0; // bandera que permite encontrar si el arreglo estaba ordenado desde antes
+        int swapped = 0;
 
-        for (int j = 0; j < n - i - 1; j++) // n - i - 1 reduce el rango de busqueda, asi no recorre siempre hasta el final cuando el elemento ordenado ya subio al final
+        for (int j = 0; j < n - i - 1; j++)
         {
-            if (arr[j] > arr[j + 1])
+            if (productos[j].id > productos[j + 1].id) // se comparan los id's, porque se ordeara por id creo
             {
-                swap(&arr[j], &arr[j + 1]);
+                swap(&productos[j], &productos[j + 1]);
                 swapped = 1;
             }
         }

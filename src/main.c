@@ -11,7 +11,8 @@ int main()
     {
         show_menu();
         printf("Seleccione una opción: ");
-        if (scanf("%d", &opcion) != 1) {
+        if (scanf("%d", &opcion) != 1)
+        {
             printf("Error al leer la opción.\n");
             return 1;
         }
@@ -29,14 +30,21 @@ int main()
             scanf("%d", &sort_option);
             if (sort_option == 1)
             {
-                printf("En construcción...\n");
-                // bubble_sort(productos, cantidad);
+                // printf("En construcción...\n");
+                printf("Datos antes de ordenar: \n");
+                display_csv_as_table("data.csv");
+                printf("Ordenando...\n");
+                sleep(3);
+                bubble_sort_op(productos, cantidad);
+                save_products("data.csv", productos, cantidad);
+                printf("Productos ordenados con Bubble Sort.\n");
+                display_csv_as_table("data.csv");
             }
             else if (sort_option == 2)
             {
                 printf("En construcción...\n");
             }
-            else if (sort_option == 3) 
+            else if (sort_option == 3)
             {
                 insertion_sort(productos, cantidad);
                 printf("Productos ordenados con Insertion Sort.\n");
@@ -48,15 +56,18 @@ int main()
             printf("1. Búsqueda Secuencial\n2. Búsqueda Binaria\n");
             int search_option;
             scanf("%d", &search_option);
-            if (search_option == 1) 
+            if (search_option == 1)
             {
                 int id;
                 printf("Ingrese el ID del producto a buscar: ");
                 scanf("%d", &id);
                 index = secuencial_search(productos, cantidad, id);
-                if (index != -1) {
+                if (index != -1)
+                {
                     printf("Producto encontrado: %s\n", productos[index].nombre);
-                } else {
+                }
+                else
+                {
                     printf("Producto no encontrado.\n");
                 }
             }

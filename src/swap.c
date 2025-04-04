@@ -11,9 +11,9 @@
  * @param element_a entero a intercambiar a
  * @param element_b entero a intercambiar b
  */
-void swap(int *element_a, int *element_b)
+void swap(Producto *a, Producto *b)
 {
-    int *temp = *element_a;
-    *element_a = *element_b;
-    *element_b = temp;
+    Producto temp = *a;
+    *a = *b;
+    *b = temp;
 }
