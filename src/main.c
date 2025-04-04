@@ -5,13 +5,16 @@ int main()
     Producto productos[100];
     int cantidad = 0;
     int opcion;
+    int index;
 
     while (1)
     {
         show_menu();
         printf("Seleccione una opción: ");
-        scanf("%d", &opcion);
-
+        if (scanf("%d", &opcion) != 1) {
+            printf("Error al leer la opción.\n");
+            return 1;
+        }
         switch (opcion)
         {
         case 1:
@@ -33,9 +36,10 @@ int main()
             {
                 printf("En construcción...\n");
             }
-            else if (sort_option == 3)
+            else if (sort_option == 3) 
             {
-                printf("En construcción...\n");
+                insertion_sort(productos, cantidad);
+                printf("Productos ordenados con Insertion Sort.\n");
             }
             printf("Productos ordenados.\n");
             break;
@@ -44,19 +48,16 @@ int main()
             printf("1. Búsqueda Secuencial\n2. Búsqueda Binaria\n");
             int search_option;
             scanf("%d", &search_option);
-            if (search_option == 1)
+            if (search_option == 1) 
             {
                 int id;
                 printf("Ingrese el ID del producto a buscar: ");
                 scanf("%d", &id);
-                // int index = secuencial_search(productos, cantidad, id);
-                if (index != -1)
-                {
-                    // printf("Producto encontrado: %s\n", productos[index].nombre);
-                }
-                else
-                {
-                    // printf("Producto no encontrado.\n");
+                index = secuencial_search(productos, cantidad, id);
+                if (index != -1) {
+                    printf("Producto encontrado: %s\n", productos[index].nombre);
+                } else {
+                    printf("Producto no encontrado.\n");
                 }
             }
             else if (search_option == 2)

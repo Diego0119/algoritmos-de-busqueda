@@ -27,3 +27,8 @@ void display_csv_as_table(const char *filename);
 void show_menu();
 
 int load_products(const char *filename, Producto productos[]);
+
+void insertion_sort(int arr[], int n);
+
+int secuencial_search(Producto productos[], int cantidad, int id) ;
+
