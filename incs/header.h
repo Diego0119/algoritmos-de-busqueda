@@ -21,11 +21,11 @@ void bubble_sort_op(Producto productos[], int n);
 
 int iterative_binary_search(int arr[], int n, int target);
 
-int recursive_binary_search(int arr[], int left, int right, int target);
+int recursive_binary_search(Producto productos[], int left, int right, int target);
 
 void display_csv_as_table(const char *filename);
 
-void show_menu();
+void show_menu(void);
 
 int load_products(const char *filename, Producto productos[]);
 

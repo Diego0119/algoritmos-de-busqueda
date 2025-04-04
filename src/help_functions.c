@@ -29,7 +29,7 @@ void display_csv_as_table(const char *filename)
     fclose(file);
 }
 
-void show_menu()
+void show_menu(void)
 {
     printf("Sistema de Gestion de Inventario\n");
     printf("1. Cargar productos desde CSV\n");

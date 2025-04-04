@@ -1,6 +1,6 @@
 #include "header.h"
 
-int main()
+int main(void)
 {
     Producto productos[100];
     int cantidad = 0;
@@ -76,14 +76,19 @@ int main()
                 int id;
                 printf("Ingrese el ID del producto a buscar: ");
                 scanf("%d", &id);
-                // int index = binary_search(productos, cantidad, id);
+                int index = recursive_binary_search(productos, 0, cantidad, id);
                 if (index != -1)
                 {
-                    // printf("Producto encontrado: %s\n", productos[index].nombre);
+                    printf("Producto encontrado:\n");
+
+                    printf("Nombre: %s\n", productos[index].nombre);
+                    printf("Categoria: %s\n", productos[index].categoria);
+                    printf("Precio: %f\n", productos[index].precio);
+                    printf("Stock: %d\n", productos[index].stock);
                 }
                 else
                 {
-                    // printf("Producto no encontrado.\n");
+                    printf("Producto no encontrado.\n");
                 }
             }
             break;
