@@ -38,7 +38,6 @@ void show_menu(void)
     printf("4. Ver estadísticas\n");
     printf("5. Salir\n");
 }
-
 int load_products(const char *filename, Producto productos[])
 {
     FILE *file = fopen(filename, "r");
@@ -51,7 +50,7 @@ int load_products(const char *filename, Producto productos[])
     char line[MAX_LINE_LENGTH];
     int index = 0;
 
-    fgets(line, sizeof(line), file);
+    fgets(line, sizeof(line), file); 
 
     while (fgets(line, sizeof(line), file))
     {
@@ -84,6 +83,8 @@ void save_products(const char *filename, Producto productos[], int n)
         printf("No se pudo abrir el archivo para escribir.\n");
         return;
     }
+
+    fprintf(file, "id,nombre,categoria,precio,stock\n");
 
     for (int i = 0; i < n; i++)
     {

@@ -30,14 +30,20 @@ int main(void)
             scanf("%d", &sort_option);
             if (sort_option == 1)
             {
-                // printf("En construcción...\n");
                 printf("Datos antes de ordenar: \n");
                 display_csv_as_table("data.csv");
+
                 printf("Ordenando...\n");
                 sleep(3);
                 bubble_sort_op(productos, cantidad);
+
+                printf("Datos después de ordenar (antes de guardar): \n");
+                display_csv_as_table("data.csv");
+
                 save_products("data.csv", productos, cantidad);
                 printf("Productos ordenados con Bubble Sort.\n");
+
+                printf("Datos después de guardar: \n");
                 display_csv_as_table("data.csv");
             }
             else if (sort_option == 2)
@@ -46,9 +52,23 @@ int main(void)
             }
             else if (sort_option == 3)
             {
+                printf("Datos antes de ordenar: \n");
+                display_csv_as_table("data.csv");
+
+                printf("Ordenando...\n");
+                sleep(3);
                 insertion_sort(productos, cantidad);
+
+                printf("Datos después de ordenar (antes de guardar): \n");
+                display_csv_as_table("data.csv");
+
+                save_products("data.csv", productos, cantidad);
                 printf("Productos ordenados con Insertion Sort.\n");
+
+                printf("Datos después de guardar: \n");
+                display_csv_as_table("data.csv");
             }
+            break;
             printf("Productos ordenados.\n");
             break;
         case 3:

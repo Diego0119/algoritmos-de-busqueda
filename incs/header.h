@@ -29,7 +29,7 @@ void show_menu(void);
 
 int load_products(const char *filename, Producto productos[]);
 
-void insertion_sort(int arr[], int n);
+void insertion_sort(Producto productos[], int n);
 
 int secuencial_search(Producto productos[], int cantidad, int id);
 

@@ -1,17 +1,17 @@
 #include "header.h"
 
-void insertion_sort(int arr[], int n)
+void insertion_sort(Producto producto[], int n)
 {
     for (int i = 1; i < n; i++)
     {
-        int key = arr[i];
+        Producto key = producto[i]; // se guarda la estructura del producto
         int j = i - 1;
 
-        while (j >= 0 && arr[j] > key)
+        while (j >= 0 && producto[j].id > key.id)
         {
-            arr[j + 1] = arr[j];
+            producto[j + 1] = producto[j]; // se mueve la estructura completa, no solo el id
             j--;
         }
-        arr[j + 1] = key;
+        producto[j + 1] = key; // se ordena
     }
 }

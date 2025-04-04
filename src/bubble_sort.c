@@ -14,7 +14,7 @@ void bubble_sort(int arr[], int n)
     }
 }
 
-void bubble_sort_op(Producto productos[], int n)
+void bubble_sort_op(Producto producto[], int n)
 {
     for (int i = 0; i < n - 1; i++)
     {
@@ -22,9 +22,9 @@ void bubble_sort_op(Producto productos[], int n)
 
         for (int j = 0; j < n - i - 1; j++)
         {
-            if (productos[j].id > productos[j + 1].id) // se comparan los id's, porque se ordeara por id creo
+            if (producto[j].id > producto[j + 1].id)
             {
-                swap(&productos[j], &productos[j + 1]);
+                swap(&producto[j], &producto[j + 1]); // se intercambia toda la estructura, no solo el id
                 swapped = 1;
             }
         }
