@@ -25,51 +25,106 @@ int main(void)
             break;
         case 2:
             printf("Selecciona el algoritmo de ordenación:\n");
-            printf("1. Bubble Sort\n2. Selection Sort\n3. Insertion Sort\n");
+            printf("1. Insertion Sort\n");
+            printf("2. Bubble Sort\n");
+            printf("3. Selection Sort\n");
+            int option;
+            scanf("%d", &option);
+
+            printf("Selecciona el criterio de ordenación:\n");
+            printf("1. Ordenar por ID\n");
+            printf("2. Ordenar por Nombre\n");
+            printf("3. Ordenar por Precio\n");
+            printf("4. Ordenar por Stock\n");
+
             int sort_option;
             scanf("%d", &sort_option);
-            if (sort_option == 1)
+
+            printf("Datos antes de ordenar: \n");
+            display_csv_as_table("data.csv");
+
+            switch (option)
             {
-                printf("Datos antes de ordenar: \n");
-                display_csv_as_table("data.csv");
+            case 1:
+                switch (sort_option)
+                {
+                case 1:
+                    insertion_sort_by_id(productos, cantidad);
+                    save_products("data.csv", productos, cantidad);
+                    break;
+                case 2:
+                    insertion_sort_by_name(productos, cantidad);
+                    save_products("data.csv", productos, cantidad);
+                    break;
+                case 3:
+                    insertion_sort_by_price(productos, cantidad);
+                    save_products("data.csv", productos, cantidad);
+                    break;
+                case 4:
+                    insertion_sort_by_stock(productos, cantidad);
+                    save_products("data.csv", productos, cantidad);
+                    break;
+                default:
+                    printf("Opción no válida.\n");
+                    break;
+                }
+                break;
 
-                printf("Ordenando...\n");
-                sleep(3);
-                bubble_sort_op(productos, cantidad);
+            case 2:
+                switch (sort_option)
+                {
+                case 1:
+                    bubble_sort_by_id(productos, cantidad);
+                    save_products("data.csv", productos, cantidad);
+                    break;
+                case 2:
+                    bubble_sort_by_name(productos, cantidad);
+                    save_products("data.csv", productos, cantidad);
+                    break;
+                case 3:
+                    bubble_sort_by_price(productos, cantidad);
+                    save_products("data.csv", productos, cantidad);
+                    break;
+                case 4:
+                    bubble_sort_by_stock(productos, cantidad);
+                    save_products("data.csv", productos, cantidad);
+                    break;
+                default:
+                    printf("Opción no válida.\n");
+                    break;
+                }
+                break;
 
-                printf("Datos después de ordenar (antes de guardar): \n");
-                display_csv_as_table("data.csv");
+            case 3:
+                switch (sort_option)
+                {
+                case 1:
+                    printf("En contruccion...\n");
+                    break;
+                case 2:
+                    printf("En contruccion...\n");
 
-                save_products("data.csv", productos, cantidad);
-                printf("Productos ordenados con Bubble Sort.\n");
+                    break;
+                case 3:
+                    printf("En contruccion...\n");
 
-                printf("Datos después de guardar: \n");
-                display_csv_as_table("data.csv");
+                    break;
+                case 4:
+                    printf("En contruccion...\n");
+
+                    break;
+                default:
+                    printf("Opción no válida.\n");
+                    break;
+                }
+                break;
+            default:
+                printf("Opción no válida.\n");
+                break;
             }
-            else if (sort_option == 2)
-            {
-                printf("En construcción...\n");
-            }
-            else if (sort_option == 3)
-            {
-                printf("Datos antes de ordenar: \n");
-                display_csv_as_table("data.csv");
 
-                printf("Ordenando...\n");
-                sleep(3);
-                insertion_sort(productos, cantidad);
-
-                printf("Datos después de ordenar (antes de guardar): \n");
-                display_csv_as_table("data.csv");
-
-                save_products("data.csv", productos, cantidad);
-                printf("Productos ordenados con Insertion Sort.\n");
-
-                printf("Datos después de guardar: \n");
-                display_csv_as_table("data.csv");
-            }
-            break;
             printf("Productos ordenados.\n");
+            display_csv_as_table("data.csv");
             break;
         case 3:
             printf("Seleccione el tipo de búsqueda:\n");
