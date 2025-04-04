@@ -27,7 +27,11 @@ void bubble_sort_by_stock(Producto productos[], int n);
 
 int iterative_binary_search(int arr[], int n, int target);
 
-int recursive_binary_search(Producto productos[], int left, int right, int target);
+int recursive_binary_search_by_id(Producto productos[], int left, int right, int target);
+
+int recursive_binary_search_by_name(Producto productos[], int left, int right, char *target);
+
+int recursive_binary_search_by_price_range(Producto productos[], int left, int right, int target);
 
 void display_csv_as_table(const char *filename);
 

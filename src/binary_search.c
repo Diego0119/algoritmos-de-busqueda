@@ -20,7 +20,7 @@ int iterative_binary_search(int arr[], int n, int target)
     return -1;
 }
 
-int recursive_binary_search(Producto productos[], int left, int right, int target)
+int recursive_binary_search_by_id(Producto productos[], int left, int right, int target)
 {
     if (left > right)
         return -1;
@@ -31,7 +31,25 @@ int recursive_binary_search(Producto productos[], int left, int right, int targe
         return mid;
 
     if (productos[mid].id > target)
-        return recursive_binary_search(productos, left, mid - 1, target);
+        return recursive_binary_search_by_id(productos, left, mid - 1, target);
 
-    return recursive_binary_search(productos, mid + 1, right, target);
+    return recursive_binary_search_by_id(productos, mid + 1, right, target);
+}
+
+int recursive_binary_search_by_name(Producto productos[], int left, int right, char *target)
+{
+    if (left > right)
+        return -1;
+
+    int mid = left + (right - left) / 2;
+
+    int comparison = strcmp(productos[mid].nombre, target);
+
+    if (comparison == 0)
+        return mid;
+
+    if (comparison > 0)
+        return recursive_binary_search_by_name(productos, left, mid - 1, target);
+
+    return recursive_binary_search_by_name(productos, mid + 1, right, target);
 }
