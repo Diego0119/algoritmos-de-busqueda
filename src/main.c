@@ -99,18 +99,22 @@ int main(void)
                 switch (sort_option)
                 {
                 case 1:
-                    printf("En contruccion...\n");
+                    selection_sort_by_id(productos, cantidad);
+                    save_products("data.csv", productos, cantidad);
                     break;
                 case 2:
+                    //selection_sort_by_nombre(productos, cantidad);
+                    //save_products("data.csv", productos, cantidad);
                     printf("En contruccion...\n");
 
                     break;
                 case 3:
-                    printf("En contruccion...\n");
-
+                    selection_sort_by_price(productos, cantidad);
+                    save_products("data.csv", productos, cantidad);
                     break;
                 case 4:
-                    printf("En contruccion...\n");
+                    selection_sort_by_stock(productos, cantidad);
+                    save_products("data.csv", productos, cantidad);
 
                     break;
                 default:

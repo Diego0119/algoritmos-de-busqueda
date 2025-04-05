@@ -47,6 +47,12 @@ void insertion_sort_by_price(Producto productos[], int n);
 
 void insertion_sort_by_stock(Producto productos[], int n);
 
+void selection_sort_by_id(Producto producto[], int n);
+
+void selection_sort_by_price(Producto producto[], int n);
+
+void selection_sort_by_stock(Producto producto[], int n);
+
 int secuencial_search(Producto productos[], int cantidad, int id);
 
 void save_products(const char *filename, Producto productos[], int n);
