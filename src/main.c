@@ -103,9 +103,8 @@ int main(void)
                     save_products("data.csv", productos, cantidad);
                     break;
                 case 2:
-                    //selection_sort_by_nombre(productos, cantidad);
-                    //save_products("data.csv", productos, cantidad);
-                    printf("En contruccion...\n");
+                    selection_sort_by_name(productos, cantidad);
+                    save_products("data.csv", productos, cantidad);
 
                     break;
                 case 3:

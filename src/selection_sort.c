@@ -57,7 +57,21 @@ void selection_sort_by_stock(Producto producto[], int n)
     }
 }
 
-// void selection_sort_by_name(Producto producto[], int n)
-// {
+void selection_sort_by_name(Producto producto[], int n)
+{
+    for (int i = 0; i < n - 1; i++)
+    {
+        int min_index = i;
 
-// }
+        for (int j = i + 1; j < n; j++)
+        {
+            if (strcmp(producto[j].nombre, producto[min_index].nombre) < 0)
+                min_index = j;
+        }
+
+        if (min_index != i)
+        {
+            swap(&producto[i], &producto[min_index]);
+        }
+    }
+}
