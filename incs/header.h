@@ -66,4 +66,12 @@ void valor_inventario(Producto producto[], int n);
 
 void save_products(const char *filename, Producto productos[], int n);
 
+void handle_statistics(Producto productos[], int cantidad);
+
+void handle_search_products(Producto productos[], int cantidad);
+
+void handle_sort_products(Producto productos[], int cantidad);
+
+void handle_load_products(Producto productos[], int *cantidad);
+
 #endif
