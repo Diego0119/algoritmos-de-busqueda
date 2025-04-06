@@ -246,11 +246,11 @@ int main(void)
             scanf("%d", &stats_option);
             if (stats_option == 1) // total de productos
             {
-                printf("En proceso de creacion...");
+                total_stock(productos, cantidad);
             }
             else if (stats_option == 2) // valor total inv.
             {
-                printf("En proceso de creacion...");
+                valor_inventario(productos, cantidad);
             }
             else if (stats_option == 3) // mayor y menor stock
             {
