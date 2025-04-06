@@ -16,7 +16,7 @@ typedef struct
 } Producto;
 
 void swap_int(int *a, int *b); 
-void swap(Producto *a, Producto *b); // Declaración de la función swap
+void swap(Producto *a, Producto *b);
 
 void bubble_sort(int arr[], int n);
 
@@ -73,5 +73,19 @@ void handle_search_products(Producto productos[], int cantidad);
 void handle_sort_products(Producto productos[], int cantidad);
 
 void handle_load_products(Producto productos[], int *cantidad);
+
+// Prototipos de funciones para manejar estadísticas
+
+void total_stock(Producto productos[], int cantidad);
+
+void valor_inventario(Producto productos[], int cantidad);
+
+void mayor_menor_stock(Producto productos[], int cantidad);
+
+void mas_caro_mas_barato(Producto productos[], int cantidad);
+
+void promedio_precios_categoria(Producto productos[], int cantidad);
+
+void cantidad_productos_categoria(Producto productos[], int cantidad);
 
 #endif
