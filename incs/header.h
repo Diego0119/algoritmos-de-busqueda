@@ -1,3 +1,5 @@
+#ifndef HEADER_H
+#define HEADER_H
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -13,7 +15,8 @@ typedef struct
     int stock;
 } Producto;
 
-void swap(Producto *a, Producto *b);
+void swap_int(int *a, int *b); 
+void swap(Producto *a, Producto *b); // Declaración de la función swap
 
 void bubble_sort(int arr[], int n);
 
@@ -62,3 +65,5 @@ void total_stock(Producto producto[], int n);
 void valor_inventario(Producto producto[], int n);
 
 void save_products(const char *filename, Producto productos[], int n);
+
+#endif
