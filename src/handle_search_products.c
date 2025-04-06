@@ -4,13 +4,13 @@ void handle_search_products(Producto productos[], int cantidad)
 {
     int search_option;
 
-    printf("Seleccione el tipo de búsqueda:\n");
-    printf("1. Búsqueda Secuencial\n");
-    printf("2. Búsqueda Binaria\n");
-    printf("Opción: ");
+    printf("Seleccione el tipo de busqueda:\n");
+    printf("1. Busqueda Secuencial\n");
+    printf("2. Busqueda Binaria\n");
+    printf("Opcion: ");
     if (scanf("%d", &search_option) != 1) 
     {
-        fprintf(stderr, "Error: Entrada inválida.\n");
+        fprintf(stderr, "Error: Entrada invalida.\n");
         while (getchar() != '\n');
         return;
     }
@@ -21,7 +21,7 @@ void handle_search_products(Producto productos[], int cantidad)
         printf("Ingrese el ID del producto a buscar: ");
         if (scanf("%d", &id) != 1) 
         {
-            fprintf(stderr, "Error: Entrada inválida.\n");
+            fprintf(stderr, "Error: Entrada invalida.\n");
             while (getchar() != '\n');
             return;
         }
@@ -38,6 +38,6 @@ void handle_search_products(Producto productos[], int cantidad)
     } 
     else if (search_option == 2) 
     {
-        printf("En proceso de implementación...\n");
+        printf("En proceso de implementacion...\n");
     }
 }

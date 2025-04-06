@@ -2,17 +2,17 @@
 // Función para mostrar estadísticas
 void handle_statistics(Producto productos[], int cantidad) 
 {
-    printf("Seleccione la estadística que quiera ver:\n");
+    printf("Seleccione la estadistica que quiera ver:\n");
     printf("1. Total de productos en inventario\n");
     printf("2. Valor total del inventario\n");
     printf("3. Producto con mayor y menor stock\n");
-    printf("4. Producto más caro y más barato\n");
-    printf("5. Promedio de precios por categoría\n");
-    printf("6. Cantidad de productos por categoría\n");
+    printf("4. Producto mas caro y mas barato\n");
+    printf("5. Promedio de precios por categoria\n");
+    printf("6. Cantidad de productos por categoria\n");
     int stats_option;
     if (scanf("%d", &stats_option) != 1) 
     {
-        fprintf(stderr, "Error: Entrada inválida.\n");
+        fprintf(stderr, "Error: Entrada invalida.\n");
         while (getchar() != '\n');
         return;
     }
@@ -21,6 +21,6 @@ void handle_statistics(Producto productos[], int cantidad)
     {
         case 1: total_stock(productos, cantidad); break;
         case 2: valor_inventario(productos, cantidad); break;
-        default: printf("En proceso de creación...\n"); break;
+        default: printf("En proceso de creacion...\n"); break;
     }
 }
