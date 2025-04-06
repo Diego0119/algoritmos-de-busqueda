@@ -234,7 +234,40 @@ int main(void)
                 }
             }
             break;
-        case 4:
+        case 4: //stats
+            printf("Seleccione la estadistica que quiera ver:\n");
+            printf("1. Total de productos en inventario\n");
+            printf("2. Valor total del inventario\n");
+            printf("3. Producto con mayor y menor stock\n");
+            printf("4. Producto más caro y más barato\n");
+            printf("5. Promedio de precios por categoría\n");
+            printf("6. Cantidad de productos por categoría\n");
+            int stats_option;
+            scanf("%d", &stats_option);
+            if (stats_option == 1) // total de productos
+            {
+                printf("En proceso de creacion...");
+            }
+            else if (stats_option == 2) // valor total inv.
+            {
+                printf("En proceso de creacion...");
+            }
+            else if (stats_option == 3) // mayor y menor stock
+            {
+                printf("En proceso de creacion...");
+            }
+            else if (stats_option == 4) // mas caro y mas barato
+            {
+                printf("En proceso de creacion...");
+            }
+            else if (stats_option == 5) // promedio precio por catg.
+            {
+                printf("En proceso de creacion...");
+            }
+            else if (stats_option == 6) // cantidad prodc. por catg.
+            {
+                printf("En proceso de creacion...");
+            }
             break;
         case 5:
             printf("Saliendo...\n");

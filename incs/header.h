@@ -57,4 +57,8 @@ void selection_sort_by_name(Producto producto[], int n);
 
 int secuencial_search(Producto productos[], int cantidad, int id);
 
+void total_stock(Producto producto[], int n);
+
+void valor_inventario(Producto producto[], int n);
+
 void save_products(const char *filename, Producto productos[], int n);
