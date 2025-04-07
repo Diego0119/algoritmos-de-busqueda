@@ -43,7 +43,7 @@ int recursive_binary_search_by_name(Producto productos[], int left, int right, c
 
     int mid = left + (right - left) / 2;
 
-    int comparison = strcmp(productos[mid].nombre, target);
+    int comparison = strcasecmp(productos[mid].nombre, target);
 
     if (comparison == 0)
         return mid;

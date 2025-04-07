@@ -40,7 +40,6 @@ void handle_search_products(Producto productos[], int cantidad)
     else if (search_option == 2)
     {
         int binary_option;
-        insertion_sort_by_id(productos, cantidad);
         printf("Seleccione el tipo de busqueda binaria:\n");
         printf("1. Por ID\n");
         printf("2. Por Nombre\n");
@@ -55,6 +54,7 @@ void handle_search_products(Producto productos[], int cantidad)
 
         if (binary_option == 1)
         {
+            insertion_sort_by_id(productos, cantidad);
             int id;
             printf("Ingrese el ID del producto a buscar: ");
             if (scanf("%d", &id) != 1)
@@ -77,14 +77,15 @@ void handle_search_products(Producto productos[], int cantidad)
         }
         else if (binary_option == 2)
         {
+            insertion_sort_by_name(productos, cantidad);
             char nombre[100];
             printf("Ingrese el nombre del producto a buscar: ");
-            scanf("%s", nombre);
+            scanf(" %[^\n]", nombre);
 
             int index = recursive_binary_search_by_name(productos, 0, cantidad - 1, nombre);
             if (index != -1)
             {
-                printf("Producto encontrado: ID %d, Nombre: %s\n", productos[index].id, productos[index].nombre);
+                printf("Producto encontrado: ID %d,\n Nombre: %s\n Categoria: %s\n Precio: %f\n", productos[index].id, productos[index].nombre, productos[index].categoria, productos[index].precio);
             }
             else
             {
