@@ -58,7 +58,7 @@ void selection_sort_by_stock(Producto producto[], int n);
 
 void selection_sort_by_name(Producto producto[], int n);
 
-int secuencial_search(Producto productos[], int cantidad, int id);
+int secuencial_search(Producto productos[], int cantidad, int (*criterio)(Producto, void *), void *clave);
 
 void total_stock(Producto producto[], int n);
 

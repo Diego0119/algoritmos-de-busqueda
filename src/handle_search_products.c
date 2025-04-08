@@ -56,7 +56,10 @@ void handle_search_products(Producto productos[], int cantidad)
         {
             char nombre[100];
             printf("Ingrese el nombre del producto a buscar: ");
-            scanf(" %[^\n]", nombre);
+            if (scanf(" %[^\n]", nombre) != 1) {
+                fprintf(stderr, "Error: Fallo al leer el nombre.\n");
+                return;
+            }
 
             int index = secuencial_search_by_name(productos, cantidad, nombre);
             if (index != -1)
@@ -116,7 +119,10 @@ void handle_search_products(Producto productos[], int cantidad)
             insertion_sort_by_name(productos, cantidad);
             char nombre[100];
             printf("Ingrese el nombre del producto a buscar: ");
-            scanf(" %[^\n]", nombre);
+            if (scanf(" %[^\n]", nombre) != 1) {
+                fprintf(stderr, "Error: Fallo al leer el nombre.\n");
+                return;
+            }
 
             int index = recursive_binary_search_by_name(productos, 0, cantidad - 1, nombre);
             if (index != -1)
