@@ -15,7 +15,7 @@ typedef struct
     int stock;
 } Producto;
 
-void swap_int(int *a, int *b); 
+void swap_int(int *a, int *b);
 void swap(Producto *a, Producto *b);
 
 void bubble_sort(int arr[], int n);
@@ -87,5 +87,9 @@ void mas_caro_mas_barato(Producto productos[], int cantidad);
 void promedio_precios_categoria(Producto productos[], int cantidad);
 
 void cantidad_productos_categoria(Producto productos[], int cantidad);
+
+int secuencial_search_by_id(Producto productos[], int cantidad, int id);
+
+int secuencial_search_by_name(Producto productos[], int cantidad, char *nombre);
 
 #endif

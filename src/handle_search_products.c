@@ -18,23 +18,59 @@ void handle_search_products(Producto productos[], int cantidad)
 
     if (search_option == 1)
     {
-        int id;
-        printf("Ingrese el ID del producto a buscar: ");
-        if (scanf("%d", &id) != 1)
+        int sequential_option;
+        printf("Seleccione el tipo de busqueda secuencial:\n");
+        printf("1. Por ID\n");
+        printf("2. Por Nombre\n");
+        printf("Opcion: ");
+        if (scanf("%d", &sequential_option) != 1)
         {
             fprintf(stderr, "Error: Entrada invalida.\n");
             while (getchar() != '\n')
                 ;
             return;
         }
-        int index = secuencial_search(productos, cantidad, id);
-        if (index != -1)
+
+        if (sequential_option == 1)
         {
-            printf("Producto encontrado: %s\n", productos[index].nombre);
+            int id;
+            printf("Ingrese el ID del producto a buscar: ");
+            if (scanf("%d", &id) != 1)
+            {
+                fprintf(stderr, "Error: Entrada invalida.\n");
+                while (getchar() != '\n')
+                    ;
+                return;
+            }
+            int index = secuencial_search_by_id(productos, cantidad, id);
+            if (index != -1)
+            {
+                printf("Producto encontrado: ID %d,\n Nombre: %s\n Categoria: %s\n Precio: %.2f\n", productos[index].id, productos[index].nombre, productos[index].categoria, productos[index].precio);
+            }
+            else
+            {
+                printf("Producto no encontrado.\n");
+            }
+        }
+        else if (sequential_option == 2)
+        {
+            char nombre[100];
+            printf("Ingrese el nombre del producto a buscar: ");
+            scanf(" %[^\n]", nombre);
+
+            int index = secuencial_search_by_name(productos, cantidad, nombre);
+            if (index != -1)
+            {
+                printf("Producto encontrado: ID %d,\n Nombre: %s\n Categoria: %s\n Precio: %.2f\n", productos[index].id, productos[index].nombre, productos[index].categoria, productos[index].precio);
+            }
+            else
+            {
+                printf("Producto no encontrado.\n");
+            }
         }
         else
         {
-            printf("Producto no encontrado.\n");
+            printf("Opcion invalida.\n");
         }
     }
     else if (search_option == 2)
