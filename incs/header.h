@@ -7,6 +7,11 @@
 #include <time.h>
 #include <math.h>
 #define MAX_LINE_LENGTH 1024
+#define MAX_PRODUCTS 10
+#define MAX_NUMBER_OF_PRODUCTS 5000
+
+extern const char *categorias[];
+extern const char *nombres[];
 
 typedef struct
 {
@@ -16,6 +21,8 @@ typedef struct
     float precio;
     int stock;
 } Producto;
+
+void generate_products_csv(const char *nombre_archivo, int cantidad);
 
 void swap_int(int *a, int *b);
 void swap(Producto *a, Producto *b);

@@ -82,7 +82,7 @@ void handle_sort_products(Producto productos[], int cantidad)
         switch (sort_option)
         {
         case 1:
-            take_time(selection_sort_by_id, productos, cantidad, "resultados.txt");
+            // take_time(selection_sort_by_id, productos, cantidad, "resultados.txt");
             selection_sort_by_id(productos, cantidad);
             break;
         case 2:

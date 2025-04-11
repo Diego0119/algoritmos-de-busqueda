@@ -2,9 +2,14 @@
 
 int main(void)
 {
-    Producto productos[100];
-    int cantidad = 0;
+
+    Producto productos[MAX_NUMBER_OF_PRODUCTS];
+    int cantidad;
+    printf("Ingrese la cantidad de productos a generar: \n");
+    scanf("%d", &cantidad);
     int opcion;
+
+    generate_products_csv("data.csv", cantidad);
 
     while (1)
     {

@@ -50,7 +50,7 @@ int load_products(const char *filename, Producto productos[])
     char line[MAX_LINE_LENGTH];
     int index = 0;
 
-    if (fgets(line, sizeof(line), file) == NULL) 
+    if (fgets(line, sizeof(line), file) == NULL)
     {
         fprintf(stderr, "Error al leer la linea del archivo o fin del archivo alcanzado.\n");
         fclose(file);
