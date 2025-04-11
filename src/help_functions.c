@@ -38,6 +38,7 @@ void show_menu(void)
     printf("4. Ver estadísticas\n");
     printf("5. Salir\n");
 }
+
 int load_products(const char *filename, Producto productos[])
 {
     FILE *file = fopen(filename, "r");

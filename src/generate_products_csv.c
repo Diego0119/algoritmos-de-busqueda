@@ -33,7 +33,7 @@ void generate_products_csv(const char *nombre_archivo, int cantidad)
 
         do
         {
-            id = rand() % (MAX_PRODUCTS * 10) + 1001; // genera id's para los poductos
+            id = rand() % (MAX_NUMBER_OF_PRODUCTS * 10) + 1001; // genera id's para los poductos
         } while (ids_usados[id - 1001] != 0); // verifica si el id ya fe ocupado
 
         ids_usados[id - 1001] = 1;

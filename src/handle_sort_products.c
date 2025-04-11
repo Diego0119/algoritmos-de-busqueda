@@ -33,7 +33,6 @@ void handle_sort_products(Producto productos[], int cantidad)
 
     printf("Datos antes de ordenar: \n");
     display_csv_as_table("data.csv");
-
     switch (option)
     {
     case 1:
