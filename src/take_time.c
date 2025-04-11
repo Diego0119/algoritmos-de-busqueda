@@ -12,9 +12,10 @@ void take_time(void (*func)(int *, int), int *arr, int n, const char *nombre_arc
         return;
     }
 
-    for (int i = 0; i < 17; i++)
+    // medimos tiempos para diferentes tamaños de arreglo (n, 2n, 4n,
+    for (int i = 0; i < 6; i++)
     {
-        int nuevo_tamano = n * pow(2, i);
+        int nuevo_tamano = n * pow(2, i); // tamaños: n, 2n, 4n, 8n
         int *nuevo_arr = (int *)malloc(nuevo_tamano * sizeof(int));
 
         if (nuevo_arr == NULL)
@@ -23,6 +24,7 @@ void take_time(void (*func)(int *, int), int *arr, int n, const char *nombre_arc
             fclose(archivo);
             return;
         }
+
         for (int j = 0; j < nuevo_tamano; j++)
         {
             nuevo_arr[j] = arr[j % n];

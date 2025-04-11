@@ -1,101 +1,101 @@
 id,nombre,categoria,precio,stock
-1001,Mouse Inalámbrico,Cómputo,778.18,65
-1002,Altavoz Portátil,Audio,321.27,165
-1003,Teclado Mecánico,Cómputo,502.46,173
-1004,Monitor Dell 24",Cómputo,274.49,96
-1005,Monitor Dell 24",Cómputo,676.70,11
-1006,Mouse Inalámbrico,Cómputo,884.25,157
-1007,Cartucho Negro,Impresión,239.33,181
-1008,Monitor Dell 24",Cómputo,75.97,117
-1009,Cartucho Negro,Impresión,160.13,83
-1010,Impresora Epson,Impresión,883.23,121
-1011,Mouse Inalámbrico,Cómputo,898.42,126
-1012,Teclado Mecánico,Cómputo,487.41,84
-1013,Altavoz Portátil,Audio,406.97,9
-1014,Tablet Samsung,Cómputo,630.44,196
-1015,Auriculares Bluetooth,Audio,781.73,119
-1016,Auriculares Bluetooth,Audio,559.12,8
-1017,Tablet Samsung,Cómputo,777.08,112
-1018,Altavoz Portátil,Audio,674.12,171
-1019,Auriculares Bluetooth,Audio,549.75,144
-1020,Auriculares Bluetooth,Audio,226.75,65
-1021,Impresora Epson,Impresión,712.99,166
-1022,Tablet Samsung,Cómputo,225.03,83
-1023,Impresora Epson,Impresión,157.68,17
-1024,Monitor Dell 24",Cómputo,233.14,129
-1025,Monitor Dell 24",Cómputo,146.49,148
-1026,Mouse Inalámbrico,Cómputo,198.73,70
-1027,Tablet Samsung,Cómputo,168.46,164
-1028,Disco Duro Externo,Almacenamiento,209.78,13
-1029,Laptop HP,Cómputo,243.23,124
-1030,Laptop HP,Cómputo,241.06,49
-1031,Laptop HP,Cómputo,895.58,127
-1032,Auriculares Bluetooth,Audio,375.57,89
-1033,Auriculares Bluetooth,Audio,348.43,30
-1034,Mouse Inalámbrico,Cómputo,775.39,94
-1035,Altavoz Portátil,Audio,887.00,171
-1036,Disco Duro Externo,Almacenamiento,771.69,109
-1037,Laptop HP,Cómputo,403.76,77
-1038,Altavoz Portátil,Audio,736.34,123
-1039,Disco Duro Externo,Almacenamiento,647.82,1
-1040,Teclado Mecánico,Cómputo,164.30,33
-1041,Monitor Dell 24",Cómputo,789.73,161
-1042,Disco Duro Externo,Almacenamiento,109.58,99
-1043,Laptop HP,Cómputo,273.73,141
-1044,Tablet Samsung,Cómputo,268.78,175
-1045,Cartucho Negro,Impresión,527.80,73
-1046,Tablet Samsung,Cómputo,234.26,70
-1047,Laptop HP,Cómputo,220.35,197
-1048,Teclado Mecánico,Cómputo,622.57,34
-1049,Teclado Mecánico,Cómputo,82.19,111
-1050,Auriculares Bluetooth,Audio,659.97,157
-1051,Laptop HP,Cómputo,26.70,156
-1052,Auriculares Bluetooth,Audio,276.23,132
-1053,Tablet Samsung,Cómputo,163.86,126
-1054,Mouse Inalámbrico,Cómputo,716.17,93
-1055,Auriculares Bluetooth,Audio,776.30,138
-1056,Tablet Samsung,Cómputo,589.10,46
-1057,Tablet Samsung,Cómputo,357.23,116
-1058,Impresora Epson,Impresión,753.59,178
-1059,Impresora Epson,Impresión,412.01,120
-1060,Altavoz Portátil,Audio,675.74,89
-1061,Impresora Epson,Impresión,542.64,149
-1062,Teclado Mecánico,Cómputo,168.46,44
-1063,Laptop HP,Cómputo,841.03,157
-1064,Impresora Epson,Impresión,88.49,131
-1065,Auriculares Bluetooth,Audio,275.32,9
-1066,Altavoz Portátil,Audio,36.72,100
-1067,Mouse Inalámbrico,Cómputo,193.86,127
-1068,Tablet Samsung,Cómputo,358.62,6
-1069,Laptop HP,Cómputo,385.25,63
-1070,Mouse Inalámbrico,Cómputo,890.52,181
-1071,Altavoz Portátil,Audio,714.05,23
-1072,Monitor Dell 24",Cómputo,687.58,62
-1073,Altavoz Portátil,Audio,529.91,113
-1074,Teclado Mecánico,Cómputo,170.30,29
-1075,Mouse Inalámbrico,Cómputo,260.51,30
-1076,Altavoz Portátil,Audio,863.48,69
-1077,Laptop HP,Cómputo,364.00,71
-1078,Monitor Dell 24",Cómputo,501.64,79
-1079,Disco Duro Externo,Almacenamiento,681.20,7
-1080,Laptop HP,Cómputo,431.39,96
-1081,Disco Duro Externo,Almacenamiento,361.72,85
-1082,Impresora Epson,Impresión,15.64,29
-1083,Altavoz Portátil,Audio,611.40,90
-1084,Cartucho Negro,Impresión,207.39,116
-1085,Cartucho Negro,Impresión,889.38,12
-1086,Disco Duro Externo,Almacenamiento,391.27,36
-1087,Tablet Samsung,Cómputo,183.12,80
-1088,Disco Duro Externo,Almacenamiento,287.57,16
-1089,Altavoz Portátil,Audio,261.35,163
-1090,Altavoz Portátil,Audio,820.92,169
-1091,Teclado Mecánico,Cómputo,37.18,33
-1092,Altavoz Portátil,Audio,127.47,5
-1093,Altavoz Portátil,Audio,889.49,170
-1094,Teclado Mecánico,Cómputo,367.78,20
-1095,Cartucho Negro,Impresión,248.55,158
-1096,Disco Duro Externo,Almacenamiento,260.04,99
-1097,Monitor Dell 24",Cómputo,879.25,41
-1098,Teclado Mecánico,Cómputo,598.79,70
-1099,Mouse Inalámbrico,Cómputo,341.10,175
-1100,Monitor Dell 24",Cómputo,285.86,53
+1001,Monitor Dell 24",Cómputo,774.25,165
+1002,Disco Duro Externo,Almacenamiento,382.26,42
+1003,Tablet Samsung,Cómputo,94.36,159
+1004,Auriculares Bluetooth,Audio,367.77,40
+1005,Auriculares Bluetooth,Audio,512.03,199
+1006,Auriculares Bluetooth,Audio,827.95,112
+1007,Altavoz Portátil,Audio,744.33,41
+1008,Monitor Dell 24",Cómputo,162.70,45
+1009,Monitor Dell 24",Cómputo,163.57,126
+1010,Disco Duro Externo,Almacenamiento,429.71,87
+1011,Disco Duro Externo,Almacenamiento,775.01,135
+1012,Disco Duro Externo,Almacenamiento,795.47,189
+1013,Mouse Inalámbrico,Cómputo,130.49,180
+1014,Tablet Samsung,Cómputo,659.12,193
+1015,Tablet Samsung,Cómputo,263.82,36
+1016,Impresora Epson,Impresión,137.97,62
+1017,Auriculares Bluetooth,Audio,445.26,164
+1018,Cartucho Negro,Impresión,464.07,34
+1019,Teclado Mecánico,Cómputo,207.24,169
+1020,Altavoz Portátil,Audio,520.00,13
+1021,Tablet Samsung,Cómputo,340.69,15
+1022,Laptop HP,Cómputo,583.67,177
+1023,Tablet Samsung,Cómputo,90.21,131
+1024,Monitor Dell 24",Cómputo,549.74,8
+1025,Auriculares Bluetooth,Audio,628.78,196
+1026,Altavoz Portátil,Audio,522.96,118
+1027,Auriculares Bluetooth,Audio,177.17,167
+1028,Auriculares Bluetooth,Audio,140.99,104
+1029,Impresora Epson,Impresión,594.07,58
+1030,Impresora Epson,Impresión,248.94,157
+1031,Cartucho Negro,Impresión,864.60,47
+1032,Teclado Mecánico,Cómputo,244.32,168
+1033,Disco Duro Externo,Almacenamiento,166.59,180
+1034,Cartucho Negro,Impresión,389.67,140
+1035,Disco Duro Externo,Almacenamiento,787.41,75
+1036,Disco Duro Externo,Almacenamiento,418.91,45
+1037,Monitor Dell 24",Cómputo,139.28,85
+1038,Tablet Samsung,Cómputo,95.05,82
+1039,Tablet Samsung,Cómputo,620.34,161
+1040,Altavoz Portátil,Audio,192.83,122
+1041,Mouse Inalámbrico,Cómputo,462.70,133
+1042,Auriculares Bluetooth,Audio,648.91,195
+1043,Teclado Mecánico,Cómputo,372.58,199
+1044,Mouse Inalámbrico,Cómputo,287.85,8
+1045,Mouse Inalámbrico,Cómputo,778.23,76
+1046,Laptop HP,Cómputo,752.46,113
+1047,Tablet Samsung,Cómputo,232.75,179
+1048,Monitor Dell 24",Cómputo,878.33,23
+1049,Auriculares Bluetooth,Audio,254.20,65
+1050,Auriculares Bluetooth,Audio,695.30,168
+1051,Altavoz Portátil,Audio,640.15,8
+1052,Impresora Epson,Impresión,501.49,181
+1053,Laptop HP,Cómputo,758.87,32
+1054,Laptop HP,Cómputo,348.46,68
+1055,Laptop HP,Cómputo,858.47,131
+1056,Mouse Inalámbrico,Cómputo,528.41,199
+1057,Teclado Mecánico,Cómputo,366.47,80
+1058,Impresora Epson,Impresión,477.09,53
+1059,Mouse Inalámbrico,Cómputo,93.79,119
+1060,Monitor Dell 24",Cómputo,647.89,196
+1061,Impresora Epson,Impresión,774.65,101
+1062,Auriculares Bluetooth,Audio,258.83,119
+1063,Monitor Dell 24",Cómputo,708.33,50
+1064,Impresora Epson,Impresión,856.77,143
+1065,Teclado Mecánico,Cómputo,466.99,4
+1066,Altavoz Portátil,Audio,884.76,164
+1067,Teclado Mecánico,Cómputo,307.46,108
+1068,Teclado Mecánico,Cómputo,723.81,36
+1069,Teclado Mecánico,Cómputo,272.56,68
+1070,Laptop HP,Cómputo,177.42,37
+1071,Tablet Samsung,Cómputo,608.83,52
+1072,Mouse Inalámbrico,Cómputo,519.49,180
+1073,Impresora Epson,Impresión,549.20,117
+1074,Cartucho Negro,Impresión,713.45,24
+1075,Impresora Epson,Impresión,860.50,61
+1076,Altavoz Portátil,Audio,900.00,175
+1077,Auriculares Bluetooth,Audio,731.34,144
+1078,Auriculares Bluetooth,Audio,126.62,156
+1079,Disco Duro Externo,Almacenamiento,211.44,197
+1080,Laptop HP,Cómputo,248.77,152
+1081,Mouse Inalámbrico,Cómputo,659.09,110
+1082,Tablet Samsung,Cómputo,897.03,119
+1083,Laptop HP,Cómputo,381.54,188
+1084,Teclado Mecánico,Cómputo,797.08,47
+1085,Teclado Mecánico,Cómputo,283.30,170
+1086,Impresora Epson,Impresión,391.82,157
+1087,Tablet Samsung,Cómputo,694.93,187
+1088,Mouse Inalámbrico,Cómputo,148.23,84
+1089,Teclado Mecánico,Cómputo,79.51,162
+1090,Auriculares Bluetooth,Audio,382.41,7
+1091,Tablet Samsung,Cómputo,231.46,100
+1092,Altavoz Portátil,Audio,518.83,19
+1093,Cartucho Negro,Impresión,841.10,178
+1094,Monitor Dell 24",Cómputo,260.45,73
+1095,Teclado Mecánico,Cómputo,330.91,31
+1096,Teclado Mecánico,Cómputo,382.21,36
+1097,Disco Duro Externo,Almacenamiento,368.97,177
+1098,Auriculares Bluetooth,Audio,48.44,36
+1099,Disco Duro Externo,Almacenamiento,780.43,35
+1100,Cartucho Negro,Impresión,304.76,164
