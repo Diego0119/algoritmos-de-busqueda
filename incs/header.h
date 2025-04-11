@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <time.h>
+#include <math.h>
 #define MAX_LINE_LENGTH 1024
 
 typedef struct
@@ -91,5 +93,7 @@ void cantidad_productos_categoria(Producto productos[], int cantidad);
 int secuencial_search_by_id(Producto productos[], int cantidad, int id);
 
 int secuencial_search_by_name(Producto productos[], int cantidad, char *nombre);
+
+void take_time(void (*func)(int *, int), int *arr, int n, const char *nombre_archivo);
 
 #endif

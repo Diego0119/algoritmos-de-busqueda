@@ -32,10 +32,10 @@ clean:
 	rm -f doc*.txt
 
 folders:
-	mkdir -p src src2 obj incs build docs
+	mkdir -p src obj incs build docs
 
 send:
-	tar czf $(GRUPO)-$(NTAR).tgz --transform 's,^,$(GRUPO)-$(NTAR)/,' Makefile src src2 incs docs
+	tar czf $(GRUPO)-$(NTAR).tgz --transform 's,^,$(GRUPO)-$(NTAR)/,' Makefile src incs docs
 
 run: build/$(EXEC)
 	./build/$(EXEC) -s f
