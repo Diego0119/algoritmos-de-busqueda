@@ -1,12 +1,12 @@
 #include "header.h"
 
-void bubble_sort(int arr[], int n) 
+void bubble_sort(int arr[], int n)
 {
-    for (int i = 0; i < n - 1; i++) 
+    for (int i = 0; i < n - 1; i++)
     {
-        for (int j = 0; j < n - i - 1; j++) 
+        for (int j = 0; j < n - i - 1; j++)
         {
-            if (arr[j] > arr[j + 1]) 
+            if (arr[j] > arr[j + 1])
             {
                 swap_int(&arr[j], &arr[j + 1]);
             }
@@ -44,7 +44,7 @@ void bubble_sort_by_name(Producto producto[], int n)
         {
             if (strcmp(producto[j].nombre, producto[j + 1].nombre) > 0)
             {
-                swap_int(&producto[j].id, &producto[j + 1].id); 
+                swap_int(&producto[j].id, &producto[j + 1].id);
                 swapped = 1;
             }
         }
