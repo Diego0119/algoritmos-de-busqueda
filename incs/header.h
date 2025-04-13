@@ -7,7 +7,7 @@
 #include <getopt.h>
 #include <time.h>
 #include <math.h>
-#include <ctype.h> 
+#include <ctype.h>
 #define MAX_LINE_LENGTH 1024
 #define MAX_PRODUCTS 10
 #define MAX_NUMBER_OF_PRODUCTS 5000
@@ -119,7 +119,7 @@ void binary_search_by_precio(Producto productos[], int cantidad, float precio);
 
 // Prototipos de funciones para manejar la ayuda
 
-void show_help();
+void show_help(void);
 
 void handle_commands(int argc, char *argv[]);
 

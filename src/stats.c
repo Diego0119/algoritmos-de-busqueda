@@ -1,5 +1,5 @@
 #include "header.h"
-//preguntar si las funciones las hacemos en ingles :P
+// preguntar si las funciones las hacemos en ingles :P
 void total_stock(Producto producto[], int n)
 {
     int total = 0;
@@ -9,7 +9,7 @@ void total_stock(Producto producto[], int n)
     printf("\nTotal de productos en stock: %d\n\n", total);
 }
 
-void valor_inventario(Producto producto[], int n) //suma de precio × stock por producto
+void valor_inventario(Producto producto[], int n) // suma de precio × stock por producto
 {
     float total_valor = 0;
     for (int i = 0; i < n; i++)

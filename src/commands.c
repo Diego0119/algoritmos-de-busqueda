@@ -3,9 +3,9 @@
 /**
  * @brief Muestra la ayuda del programa
  */
-void show_help()
+void show_help(void)
 {
-    printf("Uso: ./program.out [opciones]\n");
+    printf("Uso: ./do [opciones]\n");
     printf("Opciones disponibles:\n");
     printf("  --help                 Muestra esta ayuda\n");
     printf("  --binary-search <campo> <valor>  Realiza una busqueda binaria en el campo especificado\n");

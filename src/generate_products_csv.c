@@ -25,7 +25,7 @@ void generate_products_csv(const char *nombre_archivo, int cantidad)
     srand(time(NULL));
 
     int ids_usados[MAX_PRODUCTS * 10] = {0};
-    int index_ids_usados = 0;
+    // int index_ids_usados = 0;
 
     for (int i = 0; i < cantidad; i++)
     {
