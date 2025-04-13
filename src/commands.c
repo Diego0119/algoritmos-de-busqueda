@@ -84,7 +84,7 @@ void handle_commands(int argc, char *argv[])
             }
             else if (strcmp(campo, "Nombre") == 0)
             {
-                selection_sort_by_name(productos, cantidad);
+                // selection_sort_by_name(productos, cantidad); verificar si no hay que ordenar antes de buscar
                 int index = recursive_binary_search_by_name(productos, 0, cantidad - 1, (char *)valor);
                 if (index != -1)
                 {
