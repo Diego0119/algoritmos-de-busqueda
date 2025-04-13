@@ -4,8 +4,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <getopt.h>
 #include <time.h>
 #include <math.h>
+#include <ctype.h> 
 #define MAX_LINE_LENGTH 1024
 #define MAX_PRODUCTS 10
 #define MAX_NUMBER_OF_PRODUCTS 5000
@@ -99,8 +101,26 @@ void cantidad_productos_categoria(Producto productos[], int cantidad);
 
 int secuencial_search_by_id(Producto productos[], int cantidad, int id);
 
-int secuencial_search_by_name(Producto productos[], int cantidad, char *nombre);
+int secuencial_search_by_name(Producto productos[], int cantidad, const char *nombre);
 
 void take_time(void (*func)(int *, int), int *arr, int n, const char *nombre_archivo);
+
+int secuencial_search_by_categoria(Producto productos[], int cantidad, const char *categoria);
+
+int secuencial_search_by_precio(Producto productos[], int cantidad, float precio);
+
+int secuencial_search_by_stock(Producto productos[], int cantidad, int stock);
+
+void binary_search_by_stock(Producto productos[], int cantidad, int stock);
+
+void binary_search_by_categoria(Producto productos[], int cantidad, const char *categoria);
+
+void binary_search_by_precio(Producto productos[], int cantidad, float precio);
+
+// Prototipos de funciones para manejar la ayuda
+
+void show_help();
+
+void handle_commands(int argc, char *argv[]);
 
 #endif

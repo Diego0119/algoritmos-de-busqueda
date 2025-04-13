@@ -34,17 +34,17 @@ void bubble_sort_by_id(Producto producto[], int n)
     }
 }
 
-void bubble_sort_by_name(Producto producto[], int n)
+void bubble_sort_by_name(Producto producto[], int n) 
 {
-    for (int i = 0; i < n - 1; i++)
+    for (int i = 0; i < n - 1; i++) 
     {
         int swapped = 0;
 
-        for (int j = 0; j < n - i - 1; j++)
+        for (int j = 0; j < n - i - 1; j++) 
         {
-            if (strcmp(producto[j].nombre, producto[j + 1].nombre) > 0)
+            if (strcmp(producto[j].nombre, producto[j + 1].nombre) > 0) 
             {
-                swap_int(&producto[j].id, &producto[j + 1].id);
+                swap(&producto[j], &producto[j + 1]); 
                 swapped = 1;
             }
         }
@@ -54,17 +54,17 @@ void bubble_sort_by_name(Producto producto[], int n)
     }
 }
 
-void bubble_sort_by_price(Producto producto[], int n)
+void bubble_sort_by_price(Producto producto[], int n) 
 {
-    for (int i = 0; i < n - 1; i++)
+    for (int i = 0; i < n - 1; i++) 
     {
         int swapped = 0;
 
-        for (int j = 0; j < n - i - 1; j++)
+        for (int j = 0; j < n - i - 1; j++) 
         {
-            if (producto[j].precio > producto[j + 1].precio)
+            if (producto[j].precio > producto[j + 1].precio) 
             {
-                swap_int(&producto[j].id, &producto[j + 1].id);
+                swap(&producto[j], &producto[j + 1]); 
                 swapped = 1;
             }
         }
@@ -74,17 +74,17 @@ void bubble_sort_by_price(Producto producto[], int n)
     }
 }
 
-void bubble_sort_by_stock(Producto producto[], int n)
+void bubble_sort_by_stock(Producto producto[], int n) 
 {
-    for (int i = 0; i < n - 1; i++)
+    for (int i = 0; i < n - 1; i++) 
     {
         int swapped = 0;
 
-        for (int j = 0; j < n - i - 1; j++)
+        for (int j = 0; j < n - i - 1; j++) 
         {
-            if (producto[j].stock > producto[j + 1].stock)
+            if (producto[j].stock > producto[j + 1].stock) 
             {
-                swap_int(&producto[j].id, &producto[j + 1].id);
+                swap(&producto[j], &producto[j + 1]);
                 swapped = 1;
             }
         }

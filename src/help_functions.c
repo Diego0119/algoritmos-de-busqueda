@@ -35,50 +35,62 @@ void show_menu(void)
     printf("1. Cargar productos desde CSV\n");
     printf("2. Ordenar productos\n");
     printf("3. Buscar producto\n");
-    printf("4. Ver estadísticas\n");
+    printf("4. Ver estadisticas\n");
     printf("5. Salir\n");
 }
 
-int load_products(const char *filename, Producto productos[])
+int load_products(const char *filename, Producto productos[]) 
 {
     FILE *file = fopen(filename, "r");
-    if (file == NULL)
+    if (!file) 
     {
-        printf("No se pudo abrir el archivo.\n");
-        return 0;
+        fprintf(stderr, "Error: No se pudo abrir el archivo '%s'.\n", filename);
+        return -1;
     }
 
     char line[MAX_LINE_LENGTH];
-    int index = 0;
+    int count = 0;
 
-    if (fgets(line, sizeof(line), file) == NULL)
+    if (!fgets(line, sizeof(line), file)) 
     {
-        fprintf(stderr, "Error al leer la linea del archivo o fin del archivo alcanzado.\n");
+        fprintf(stderr, "Error: El archivo '%s' esta vacio o no tiene encabezados.\n", filename);
         fclose(file);
-        return 0;
+        return -1;
     }
 
-    while (fgets(line, sizeof(line), file))
+    while (fgets(line, sizeof(line), file)) 
     {
-        line[strcspn(line, "\n")] = 0;
+        line[strcspn(line, "\n")] = '\0';
 
-        char *id_str = strtok(line, ",");
-        char *nombre = strtok(NULL, ",");
-        char *categoria = strtok(NULL, ",");
-        char *precio_str = strtok(NULL, ",");
-        char *stock_str = strtok(NULL, ",");
+        if (strlen(line) == 0) 
+        {
+            fprintf(stderr, "Advertencia: Linea vacia encontrada en el archivo.\n");
+            continue;
+        }
 
-        productos[index].id = atoi(id_str);
-        strcpy(productos[index].nombre, nombre);
-        strcpy(productos[index].categoria, categoria);
-        productos[index].precio = atof(precio_str);
-        productos[index].stock = atoi(stock_str);
-
-        index++;
+        if (sscanf(line, "%d,%99[^,],%49[^,],%f,%d",
+                   &productos[count].id,
+                   productos[count].nombre,
+                   productos[count].categoria,
+                   &productos[count].precio,
+                   &productos[count].stock) == 5) 
+                   {
+            count++;
+            if (count >= MAX_NUMBER_OF_PRODUCTS) 
+            {
+                fprintf(stderr, "Advertencia: Se alcanzo el limite maximo de productos (%d).\n", MAX_NUMBER_OF_PRODUCTS);
+                break;
+            }
+        } 
+        else 
+        {
+            fprintf(stderr, "Advertencia: Linea con formato incorrecto: '%s'\n", line);
+        }
     }
 
     fclose(file);
-    return index;
+    
+    return count;
 }
 
 void save_products(const char *filename, Producto productos[], int n)
