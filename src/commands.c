@@ -37,6 +37,8 @@ void handle_commands(int argc, char *argv[])
             {"generate", required_argument, 0, 'g'},
             {"modify-price", no_argument, 0, 'p'},
             {"modify-stock", no_argument, 0, 't'},
+            {"try-sorting", no_argument, 0, 'sorting'},
+            {"try-searching", no_argument, 0, 'searching'},
             {0, 0, 0, 0}};
 
     while ((opt = getopt_long(argc, argv, "hb:s:uieg:", long_options, &opt_index)) != -1)
@@ -118,6 +120,29 @@ void handle_commands(int argc, char *argv[])
             return;
         }
 
+        case 'sorting':
+            if (1)
+            {
+                // esto es para probar los tiempos de ordenamiento
+                Producto productos[MAX_NUMBER_OF_PRODUCTS];
+                int cantidad = load_products("data.csv", productos);
+                take_time_producto(bubble_sort_by_id, productos, cantidad, "bubble.txt");
+                take_time_producto(insertion_sort_by_id, productos, cantidad, "insertion.txt");
+                take_time_producto(selection_sort_by_id, productos, cantidad, "selection.txt");
+            }
+            return;
+
+        case 'searching':
+            if (1)
+            {
+                // esto es para probar los tiempo de busqueda
+                Producto productos[MAX_NUMBER_OF_PRODUCTS];
+                int cantidad = load_products("data.csv", productos);
+                selection_sort_by_id(productos, cantidad); // ordenar antes es necesario para la busqueda binaria
+                take_time_search(secuencial_search_by_id, productos, cantidad, "secuencial.txt");
+                take_time_search(wrapper_binary_search, productos, cantidad, "binaria.txt");
+            }
+            return;
         case 's':
         {
             if (optind + 1 >= argc)
@@ -212,6 +237,7 @@ void handle_commands(int argc, char *argv[])
 
             if (strcmp(campo, "ID") == 0)
             {
+                // take_time(bubble_sort_by_id, productos, cantidad, "resultados.txt");
                 bubble_sort_by_id(productos, cantidad);
             }
             else if (strcmp(campo, "Nombre") == 0)
@@ -256,6 +282,7 @@ void handle_commands(int argc, char *argv[])
 
             if (strcmp(campo, "ID") == 0)
             {
+                // take_time(insertion_sort_by_id, productos, cantidad, "resultados.txt");
                 insertion_sort_by_id(productos, cantidad);
             }
             else if (strcmp(campo, "Nombre") == 0)
@@ -300,6 +327,7 @@ void handle_commands(int argc, char *argv[])
 
             if (strcmp(campo, "ID") == 0)
             {
+                // take_time(selection_sort_by_id, productos, cantidad, "resultados.txt");
                 selection_sort_by_id(productos, cantidad);
             }
             else if (strcmp(campo, "Nombre") == 0)

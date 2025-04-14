@@ -103,7 +103,9 @@ int secuencial_search_by_id(Producto productos[], int cantidad, int id);
 
 int secuencial_search_by_name(Producto productos[], int cantidad, const char *nombre);
 
-void take_time(void (*func)(int *, int), int *arr, int n, const char *nombre_archivo);
+void take_time_producto(void (*func)(Producto *, int), Producto *arr, int n, const char *nombre_archivo);
+
+void take_time_search(int (*search_func)(Producto[], int, int), Producto productos[], int cantidad, const char *archivo_resultado);
 
 int secuencial_search_by_categoria(Producto productos[], int cantidad, const char *categoria);
 
@@ -116,6 +118,8 @@ void binary_search_by_stock(Producto productos[], int cantidad, int stock);
 void binary_search_by_categoria(Producto productos[], int cantidad, const char *categoria);
 
 void binary_search_by_precio(Producto productos[], int cantidad, float precio);
+
+int wrapper_binary_search(Producto productos[], int cantidad, int id);
 
 // Prototipos de funciones para manejar la ayuda
 

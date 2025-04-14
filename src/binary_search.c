@@ -208,3 +208,8 @@ void binary_search_by_stock(Producto productos[], int cantidad, int stock)
         printf("No se encontraron productos con el stock %d.\n", stock);
     }
 }
+
+int wrapper_binary_search(Producto productos[], int cantidad, int id)
+{
+    return recursive_binary_search_by_id(productos, 0, cantidad - 1, id);
+}

@@ -39,7 +39,6 @@ void handle_sort_products(Producto productos[], int cantidad)
         switch (sort_option)
         {
         case 1:
-            take_time(insertion_sort_by_id, productos, cantidad, "resultados.txt");
             insertion_sort_by_id(productos, cantidad);
             break;
         case 2:
@@ -60,7 +59,7 @@ void handle_sort_products(Producto productos[], int cantidad)
         switch (sort_option)
         {
         case 1:
-            take_time(bubble_sort_by_id, productos, cantidad, "resultados.txt");
+            printf("SE TOMARA EL TIEMPO\n");
             bubble_sort_by_id(productos, cantidad);
             break;
         case 2:
@@ -81,7 +80,6 @@ void handle_sort_products(Producto productos[], int cantidad)
         switch (sort_option)
         {
         case 1:
-            // take_time(selection_sort_by_id, productos, cantidad, "resultados.txt");
             selection_sort_by_id(productos, cantidad);
             break;
         case 2:

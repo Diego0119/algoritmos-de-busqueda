@@ -20,7 +20,7 @@ void selection_sort_by_id(Producto producto[], int n)
 
         if (min_index != i)
         {
-            swap(&producto[i], &producto[min_index]); // Intercambia las estructuras completas
+            swap_int(&producto[i].id, &producto[min_index].id);
         }
     }
 }
