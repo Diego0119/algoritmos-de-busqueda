@@ -16,6 +16,7 @@ void show_help(void)
     printf("  --generate <cantidad>  Genera un archivo CSV con datos aleatorios\n");
     printf("  --modify-price <ID> <nuevo_precio>  Modifica el precio de un producto por su ID\n");
     printf("  --modify-stock <ID> <nuevo_stock>  Modifica el stock de un producto por su ID\n");
+    printf("  --stats                Muestra estadísticas del inventario\n");
 }
 
 /**
@@ -39,12 +40,33 @@ void handle_commands(int argc, char *argv[])
             {"modify-stock", no_argument, 0, 't'},
             {"try-sorting", no_argument, 0, 'x'},
             {"try-searching", no_argument, 0, 'y'},
+            {"stats", no_argument, 0, 'w'},
             {0, 0, 0, 0}};
 
     while ((opt = getopt_long(argc, argv, "hb:s:uieg:", long_options, &opt_index)) != -1)
     {
         switch (opt)
         {
+
+        case 'w': // Comando para estadísticas
+        {
+            Producto productos[MAX_NUMBER_OF_PRODUCTS];
+            int cantidad = load_products("data.csv", productos);
+            if (cantidad == -1) 
+            {
+                printf("Error: No se pudo cargar el archivo CSV.\n");
+                return;
+            }
+
+            printf("Mostrando estadísticas del inventario:\n");
+            mayor_stock(productos, cantidad);
+            menor_stock(productos, cantidad);
+            mas_caro(productos, cantidad);
+            menos_caro(productos, cantidad);
+            promedio_precio_por_categoria(productos, cantidad);
+            total_productos_por_categoria(productos, cantidad);
+            return;
+        }
         case 'h':
             show_help();
             return;

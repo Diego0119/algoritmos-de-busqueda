@@ -11,6 +11,7 @@
 #define MAX_LINE_LENGTH 1024
 #define MAX_PRODUCTS 10
 #define MAX_NUMBER_OF_PRODUCTS 5000
+#define MAX_CATEGORIAS 50
 
 extern const char *categorias[];
 extern const char *nombres[];
@@ -126,5 +127,17 @@ int wrapper_binary_search(Producto productos[], int cantidad, int id);
 void show_help(void);
 
 void handle_commands(int argc, char *argv[]);
+
+void mayor_stock(Producto productos[], int n);
+
+void menor_stock(Producto productos[], int n);
+
+void mas_caro(Producto productos[], int n);
+
+void menos_caro(Producto productos[], int n);
+
+void promedio_precio_por_categoria(Producto productos[], int n);
+
+void total_productos_por_categoria(Producto productos[], int n);
 
 #endif
