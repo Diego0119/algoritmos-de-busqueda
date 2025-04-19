@@ -67,11 +67,11 @@ void handle_commands(int argc, char *argv[])
             total_productos_por_categoria(productos, cantidad);
             return;
         }
-        case 'h':
+        case 'h': // Comando para mostrar ayuda
             show_help();
             return;
 
-        case 'b':
+        case 'b': // Comando para búsqueda binaria
         {
             if (optind + 1 >= argc)
             {
@@ -108,7 +108,6 @@ void handle_commands(int argc, char *argv[])
             }
             else if (strcmp(campo, "Nombre") == 0)
             {
-                // selection_sort_by_name(productos, cantidad); verificar si no hay que ordenar antes de buscar
                 int index = recursive_binary_search_by_name(productos, 0, cantidad - 1, (char *)valor);
                 if (index != -1)
                 {
@@ -142,7 +141,7 @@ void handle_commands(int argc, char *argv[])
             return;
         }
 
-        case 'x':
+        case 'x': // Comando para probar tiempos de ordenamiento
             if (1)
             {
                 // esto es para probar los tiempos de ordenamiento
@@ -154,7 +153,7 @@ void handle_commands(int argc, char *argv[])
             }
             return;
 
-        case 'y':
+        case 'y': // Comando para probar tiempos de búsqueda
             if (1)
             {
                 // esto es para probar los tiempo de busqueda
@@ -165,7 +164,8 @@ void handle_commands(int argc, char *argv[])
                 take_time_search(wrapper_binary_search, productos, cantidad, "binaria.txt");
             }
             return;
-        case 's':
+
+        case 's': // Comando para búsqueda secuencial
         {
             if (optind + 1 >= argc)
             {
@@ -240,7 +240,7 @@ void handle_commands(int argc, char *argv[])
             return;
         }
 
-        case 'u':
+        case 'u': // Comando para ordenamiento por Bubble Sort
         {
             if (optind >= argc)
             {
@@ -285,8 +285,8 @@ void handle_commands(int argc, char *argv[])
             return;
         }
 
-        case 'i':
-        {
+        case 'i': // Comando para ordenamiento por Insertion Sort
+        { 
             if (optind >= argc)
             {
                 printf("Error: Debes proporcionar un campo para la ordenación (ID, Nombre, Precio, Stock).\n");
@@ -330,7 +330,7 @@ void handle_commands(int argc, char *argv[])
             return;
         }
 
-        case 'e':
+        case 'e': // Comando para ordenamiento por Selection Sort
         {
             if (optind >= argc)
             {
@@ -375,7 +375,7 @@ void handle_commands(int argc, char *argv[])
             return;
         }
 
-        case 'g':
+        case 'g': // comando para generar CSV
         {
             char *endptr;
             int cantidad = strtol(optarg, &endptr, 10);
@@ -388,7 +388,8 @@ void handle_commands(int argc, char *argv[])
             generate_products_csv("data.csv", cantidad);
             return;
         }
-        case 'p':
+
+        case 'p': // Comando para modificar el precio de un producto
         {
             if (optind + 1 >= argc)
             {
@@ -430,7 +431,7 @@ void handle_commands(int argc, char *argv[])
             return;
         }
 
-        case 't':
+        case 't': // Comando para modificar el stock de un producto
         {
             if (optind + 1 >= argc)
             {

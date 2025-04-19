@@ -1,19 +1,24 @@
 #include "header.h"
 
+/**
+ * @brief Muestra el contenido de un archivo CSV como una tabla en la consola.
+ * @param filename Nombre del archivo CSV a mostrar.
+*/
+
 void display_csv_as_table(const char *filename)
 {
-    FILE *file = fopen(filename, "r");
+    FILE *file = fopen(filename, "r"); // Abre el archivo en modo lectura
     if (file == NULL)
     {
         printf("No se pudo abrir el archivo.\n");
         return;
     }
 
-    char line[MAX_LINE_LENGTH];
+    char line[MAX_LINE_LENGTH]; // Buffer para almacenar cada línea del archivo
 
     printf("%-10s %-30s %-15s %-10s %-10s\n", "ID", "Nombre", "Categoria", "Precio", "Stock");
 
-    while (fgets(line, sizeof(line), file))
+    while (fgets(line, sizeof(line), file)) // Lee cada linea del archivo
     {
         line[strcspn(line, "\n")] = 0;
 
@@ -27,16 +32,6 @@ void display_csv_as_table(const char *filename)
     }
 
     fclose(file);
-}
-
-void show_menu(void)
-{
-    printf("Sistema de Gestion de Inventario\n");
-    printf("1. Cargar productos desde CSV\n");
-    printf("2. Ordenar productos\n");
-    printf("3. Buscar producto\n");
-    printf("4. Ver estadisticas\n");
-    printf("5. Salir\n");
 }
 
 int load_products(const char *filename, Producto productos[]) 

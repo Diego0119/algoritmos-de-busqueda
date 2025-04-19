@@ -50,8 +50,6 @@ int recursive_binary_search_by_price_range(Producto productos[], int left, int r
 
 void display_csv_as_table(const char *filename);
 
-void show_menu(void);
-
 int load_products(const char *filename, Producto productos[]);
 
 void insertion_sort_by_id(Producto productos[], int n);
@@ -139,5 +137,7 @@ void menos_caro(Producto productos[], int n);
 void promedio_precio_por_categoria(Producto productos[], int n);
 
 void total_productos_por_categoria(Producto productos[], int n);
+
+int criterio_por_id(Producto producto, void *clave);
 
 #endif
